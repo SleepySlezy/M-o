@@ -1,3 +1,4 @@
+# PLEASE NOTE YOU NEED TO RUN cargo check & only cargo run --release if check responds with "Finished `dev` profile"
 
 ## What this first version actually gets
 
