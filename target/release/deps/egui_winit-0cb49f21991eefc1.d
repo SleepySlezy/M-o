@@ -1,0 +1,10 @@
+C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\target\release\deps\egui_winit-0cb49f21991eefc1.d: C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\lib.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\clipboard.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\safe_area.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\window_settings.rs
+
+C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\target\release\deps\libegui_winit-0cb49f21991eefc1.rlib: C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\lib.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\clipboard.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\safe_area.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\window_settings.rs
+
+C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\target\release\deps\libegui_winit-0cb49f21991eefc1.rmeta: C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\lib.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\clipboard.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\safe_area.rs C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\window_settings.rs
+
+C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\lib.rs:
+C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\clipboard.rs:
+C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\safe_area.rs:
+C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\egui-winit-0.33.3\src\window_settings.rs:

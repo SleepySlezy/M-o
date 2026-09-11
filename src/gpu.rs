@@ -1,5 +1,6 @@
 #[cfg(windows)]
 use windows::{
+    core::Interface,
     Win32::Graphics::Dxgi::{
         CreateDXGIFactory1,
         IDXGIAdapter1,
@@ -170,17 +171,19 @@ VBIOS: {}
 
 #[cfg(windows)]
 unsafe fn detect_windows() -> windows::core::Result<GpuInfo> {
-    let factory: IDXGIFactory6 = CreateDXGIFactory1()?;
+    let factory: IDXGIFactory6 = unsafe { CreateDXGIFactory1()? };
 
     let mut adapters: Vec<IDXGIAdapter1> = Vec::new();
 
     let mut index = 0;
 
     loop {
-        match factory.EnumAdapterByGpuPreference(
-            index,
-            DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE,
-        ) {
+        match unsafe {
+            factory.EnumAdapterByGpuPreference(
+                index,
+                DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE,
+            )
+        } {
             Ok(adapter) => {
                 adapters.push(adapter);
                 index += 1;
@@ -192,15 +195,15 @@ unsafe fn detect_windows() -> windows::core::Result<GpuInfo> {
 
     // Prefer AMD discrete GPU.
     for adapter in &adapters {
-        let desc = adapter.GetDesc1()?;
+        let desc = unsafe { adapter.GetDesc1()? };
 
-        if desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE.0 != 0 {
+        if desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE.0 as u32 != 0 {
             continue;
         }
 
         // AMD PCI vendor ID.
         if desc.VendorId == 0x1002 {
-            return build_amd_info(adapter);
+            return unsafe { build_amd_info(adapter) };
         }
     }
 
@@ -212,7 +215,7 @@ unsafe fn detect_windows() -> windows::core::Result<GpuInfo> {
 unsafe fn build_amd_info(
     adapter: &IDXGIAdapter1,
 ) -> windows::core::Result<GpuInfo> {
-    let desc = adapter.GetDesc1()?;
+    let desc = unsafe { adapter.GetDesc1()? };
 
     let name = utf16_to_string(&desc.Description);
 
@@ -234,13 +237,21 @@ unsafe fn build_amd_info(
     }
 
     let architecture = determine_architecture(&name);
+    let memory_bus = determine_memory_bus(&name);
+    let memory_bandwidth = determine_memory_bandwidth(&name);
 
     let adapter3: IDXGIAdapter3 = adapter.cast()?;
 
-    let memory = adapter3.QueryVideoMemoryInfo(
-        0,
-        DXGI_MEMORY_SEGMENT_GROUP_LOCAL,
-    )?;
+    let mut memory =
+        windows::Win32::Graphics::Dxgi::DXGI_QUERY_VIDEO_MEMORY_INFO::default();
+
+    unsafe {
+        adapter3.QueryVideoMemoryInfo(
+            0,
+            DXGI_MEMORY_SEGMENT_GROUP_LOCAL,
+            &mut memory,
+        )?;
+    }
 
     let total_bytes = desc.DedicatedVideoMemory as u64;
 
@@ -275,9 +286,9 @@ unsafe fn build_amd_info(
 
         memory_type: "GDDR6".into(),
 
-        memory_bus: determine_memory_bus(&name),
+        memory_bus,
 
-        memory_bandwidth: determine_memory_bandwidth(&name),
+        memory_bandwidth,
 
         gpu_clock: "N/A".into(),
         memory_clock: "N/A".into(),
