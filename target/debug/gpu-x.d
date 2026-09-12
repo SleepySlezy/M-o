@@ -1,0 +1,1 @@
+C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\target\debug\gpu-x.exe: C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\src\gpu.rs C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\src\main.rs
