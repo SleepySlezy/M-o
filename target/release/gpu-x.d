@@ -1,1 +1,1 @@
-C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\target\release\gpu-x.exe: C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\src\gpu.rs C:\Users\SleepySlezy\OneDrive\Documents\GitHub\GPU-X\src\main.rs
+C:\Users\SleepySlezy\OneDrive\Desktop\Firmware\Read\ and\ Display\GPU-X\target\release\gpu-x.exe: C:\Users\SleepySlezy\OneDrive\Desktop\Firmware\Read\ and\ Display\GPU-X\src\adlx.rs C:\Users\SleepySlezy\OneDrive\Desktop\Firmware\Read\ and\ Display\GPU-X\src\gpu.rs C:\Users\SleepySlezy\OneDrive\Desktop\Firmware\Read\ and\ Display\GPU-X\src\main.rs
