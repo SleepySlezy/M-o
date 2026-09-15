@@ -61,10 +61,6 @@
         #elif __has_include("include/IPerformanceMonitoring.h")
             #include "include/IPerformanceMonitoring.h"
         #endif
-    #else
-        #include "ADLXHelper.h"
-        #include "ADLX.h"
-        #include "IPerformanceMonitoring.h"
     #endif
 
     using namespace adlx;
