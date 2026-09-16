@@ -1,4 +1,4 @@
-# PLEASE NOTE YOU NEED TO RUN `cargo check` & only `cargo run --release` if check responds with "`Finished `dev` profile`"
+# PLEASE NOTE YOU NEED TO RUN `cargo check` & only `cargo run --release` if check responds with "`Finished dev profile`"
 
 ## What this first version actually gets
 
@@ -24,4 +24,4 @@ Memory Bus       256-bit
 Bandwidth        640 GB/s
 
 EVERYTHING ELSE IS CURRENTLY UNDER WORK, AMD-ADLX-SDK IS BEING IMPLEMENTED AND TRANSLATED MANUALLY, PLEASE REPORT ISSUES WHEN RELEASED.
-PLEASE NOTE ON V0.1.2 IT'S UNUSABLE.
+PLEASE NOTE ON V0.1.2 IT'S UNUSABLE
