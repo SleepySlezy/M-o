@@ -69,7 +69,7 @@
     // bridge still links and reports an invalid/empty state instead of crashing.
 #endif
 
-extern "C" {
+
 
 struct GpuTelemetry {
     double gpu_usage;
@@ -80,7 +80,7 @@ struct GpuTelemetry {
     double fan_rpm;
 };
 
-bool gpu_x_get_telemetry(GpuTelemetry* out)
+extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
 {
     if (out == nullptr)
         return false;
@@ -171,6 +171,4 @@ bool gpu_x_get_telemetry(GpuTelemetry* out)
 #else
     return false;
 #endif
-}
-
 }
