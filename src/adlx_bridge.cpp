@@ -1,77 +1,49 @@
+#include <cstddef>
+#include <cstdio>
+
 #if defined(__has_include)
-    #if __has_include("ADLX/ADLXHelper.h") || \
-        __has_include("ADLXHelper.h") || \
-        __has_include("../ADLXHelper.h") || \
-        __has_include("../include/ADLXHelper.h") || \
-        __has_include("include/ADLXHelper.h")
-        #define GPU_X_HAS_ADLX_HELPER 1
-    #endif
 
-    #if __has_include("ADLX/ADLX.h") || \
-        __has_include("ADLX.h") || \
-        __has_include("../ADLX.h") || \
-        __has_include("../include/ADLX.h") || \
-        __has_include("include/ADLX.h")
-        #define GPU_X_HAS_ADLX_API 1
-    #endif
-
-    #if __has_include("ADLX/IPerformanceMonitoring.h") || \
-        __has_include("IPerformanceMonitoring.h") || \
-        __has_include("../IPerformanceMonitoring.h") || \
-        __has_include("../include/IPerformanceMonitoring.h") || \
-        __has_include("include/IPerformanceMonitoring.h")
-        #define GPU_X_HAS_ADLX_PERF 1
-    #endif
+#if __has_include("ADLX/ADLXHelper.h")
+    #include "ADLX/ADLXHelper.h"
+    #define GPU_X_HAS_ADLX_HELPER 1
+#elif __has_include("ADLXHelper.h")
+    #include "ADLXHelper.h"
+    #define GPU_X_HAS_ADLX_HELPER 1
 #endif
 
-#if defined(GPU_X_HAS_ADLX_HELPER) && defined(GPU_X_HAS_ADLX_API) && defined(GPU_X_HAS_ADLX_PERF)
-    #if defined(__has_include)
-        #if __has_include("ADLX/ADLXHelper.h")
-            #include "ADLX/ADLXHelper.h"
-        #elif __has_include("ADLXHelper.h")
-            #include "ADLXHelper.h"
-        #elif __has_include("../ADLXHelper.h")
-            #include "../ADLXHelper.h"
-        #elif __has_include("../include/ADLXHelper.h")
-            #include "../include/ADLXHelper.h"
-        #elif __has_include("include/ADLXHelper.h")
-            #include "include/ADLXHelper.h"
-        #endif
+#if __has_include("ADLX/ADLX.h")
+    #include "ADLX/ADLX.h"
+    #define GPU_X_HAS_ADLX_API 1
+#elif __has_include("ADLX.h")
+    #include "ADLX.h"
+    #define GPU_X_HAS_ADLX_API 1
+#endif
 
-        #if __has_include("ADLX/ADLX.h")
-            #include "ADLX/ADLX.h"
-        #elif __has_include("ADLX.h")
-            #include "ADLX.h"
-        #elif __has_include("../ADLX.h")
-            #include "../ADLX.h"
-        #elif __has_include("../include/ADLX.h")
-            #include "../include/ADLX.h"
-        #elif __has_include("include/ADLX.h")
-            #include "include/ADLX.h"
-        #endif
+#if __has_include("ADLX/IPerformanceMonitoring.h")
+    #include "ADLX/IPerformanceMonitoring.h"
+    #define GPU_X_HAS_ADLX_PERF 1
+#elif __has_include("IPerformanceMonitoring.h")
+    #include "IPerformanceMonitoring.h"
+    #define GPU_X_HAS_ADLX_PERF 1
+#endif
 
-        #if __has_include("ADLX/IPerformanceMonitoring.h")
-            #include "ADLX/IPerformanceMonitoring.h"
-        #elif __has_include("IPerformanceMonitoring.h")
-            #include "IPerformanceMonitoring.h"
-        #elif __has_include("../IPerformanceMonitoring.h")
-            #include "../IPerformanceMonitoring.h"
-        #elif __has_include("../include/IPerformanceMonitoring.h")
-            #include "../include/IPerformanceMonitoring.h"
-        #elif __has_include("include/IPerformanceMonitoring.h")
-            #include "include/IPerformanceMonitoring.h"
-        #endif
-    #endif
+#endif
 
-    using namespace adlx;
+#if defined(GPU_X_HAS_ADLX_HELPER) && \
+    defined(GPU_X_HAS_ADLX_API) && \
+    defined(GPU_X_HAS_ADLX_PERF)
+
+using namespace adlx;
+#define GPU_X_ADLX_AVAILABLE 1
+
 #else
-    // ADLX is unavailable in this build; provide a conservative fallback so the
-    // bridge still links and reports an invalid/empty state instead of crashing.
+
+#define GPU_X_ADLX_AVAILABLE 0
+
 #endif
 
-
-
-struct GpuTelemetry {
+struct GpuTelemetry
+{
     double gpu_usage;
     double gpu_clock;
     double memory_clock;
@@ -85,14 +57,8 @@ extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
     if (out == nullptr)
         return false;
 
-    out->gpu_usage = -1.0;
-    out->gpu_clock = -1.0;
-    out->memory_clock = -1.0;
-    out->temperature = -1.0;
-    out->power = -1.0;
-    out->fan_rpm = -1.0;
+#if GPU_X_ADLX_AVAILABLE
 
-#if defined(GPU_X_HAS_ADLX_HELPER) && defined(GPU_X_HAS_ADLX_API) && defined(GPU_X_HAS_ADLX_PERF)
     ADLXHelper helper;
 
     if (helper.Initialize() != ADLX_OK)
@@ -106,69 +72,90 @@ extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
         return false;
     }
 
-    auto gpu_services = system->GetGPUsServices();
-
-    if (gpu_services == nullptr)
-    {
-        helper.Terminate();
-        return false;
-    }
-
     IADLXGPUListPtr gpu_list;
+    ADLX_RESULT result = system->GetGPUs(&gpu_list);
 
-    if (gpu_services->GetGPUs(&gpu_list) != ADLX_OK || gpu_list == nullptr)
+    if (result != ADLX_OK || gpu_list == nullptr)
     {
+        system = nullptr;
         helper.Terminate();
         return false;
     }
 
     IADLXGPUPtr gpu;
+    result = gpu_list->At(0, &gpu);
 
-    if (gpu_list->At(0, &gpu) != ADLX_OK || gpu == nullptr)
+    if (result != ADLX_OK || gpu == nullptr)
     {
+        gpu = nullptr;
+        gpu_list = nullptr;
+        system = nullptr;
         helper.Terminate();
         return false;
     }
 
-    auto performance =
-        system->GetPerformanceMonitoringServices();
+    IADLXPerformanceMonitoringServicesPtr performance;
+    result = system->GetPerformanceMonitoringServices(&performance);
 
-    if (performance == nullptr)
+    if (result != ADLX_OK || performance == nullptr)
     {
+        performance = nullptr;
+        gpu = nullptr;
+        gpu_list = nullptr;
+        system = nullptr;
         helper.Terminate();
         return false;
     }
 
     IADLXGPUMetricsPtr metrics;
+    result = performance->GetCurrentGPUMetrics(gpu, &metrics);
 
-    if (performance->GetCurrentGPUMetrics(
-            gpu,
-            &metrics) != ADLX_OK ||
-        metrics == nullptr)
+    if (result != ADLX_OK || metrics == nullptr)
     {
+        metrics = nullptr;
+        performance = nullptr;
+        gpu = nullptr;
+        gpu_list = nullptr;
+        system = nullptr;
         helper.Terminate();
         return false;
     }
 
-    metrics->GPUUsage(&out->gpu_usage);
+    adlx_double gpu_usage = 0.0;
+    adlx_int gpu_clock = 0;
+    adlx_int memory_clock = 0;
+    adlx_double temperature = 0.0;
+    adlx_double power = 0.0;
+    adlx_int fan_rpm = 0;
 
-    int gpu_clock = -1;
-    int memory_clock = -1;
-    int fan_rpm = -1;
-
+    metrics->GPUUsage(&gpu_usage);
     metrics->GPUClockSpeed(&gpu_clock);
     metrics->GPUVRAMClockSpeed(&memory_clock);
-    metrics->GPUTemperature(&out->temperature);
-    metrics->GPUPower(&out->power);
+    metrics->GPUTemperature(&temperature);
+    metrics->GPUPower(&power);
     metrics->GPUFanSpeed(&fan_rpm);
 
+    out->gpu_usage = gpu_usage;
     out->gpu_clock = static_cast<double>(gpu_clock);
     out->memory_clock = static_cast<double>(memory_clock);
+    out->temperature = temperature;
+    out->power = power;
     out->fan_rpm = static_cast<double>(fan_rpm);
 
+    metrics = nullptr;
+    performance = nullptr;
+    gpu = nullptr;
+    gpu_list = nullptr;
+    system = nullptr;
+
     helper.Terminate();
+
     return true;
+
 #else
+
+    (void)out;
     return false;
+
 #endif
 }

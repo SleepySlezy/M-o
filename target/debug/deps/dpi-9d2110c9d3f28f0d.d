@@ -1,5 +1,5 @@
-C:\Users\SleepySlezy\OneDrive\Desktop\Firmware\Read and Display\GPU-X\target\debug\deps\dpi-9d2110c9d3f28f0d.d: C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dpi-0.1.2\src\lib.rs
+C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\deps\dpi-9d2110c9d3f28f0d.d: C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dpi-0.1.2\src\lib.rs
 
-C:\Users\SleepySlezy\OneDrive\Desktop\Firmware\Read and Display\GPU-X\target\debug\deps\libdpi-9d2110c9d3f28f0d.rmeta: C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dpi-0.1.2\src\lib.rs
+C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\deps\libdpi-9d2110c9d3f28f0d.rmeta: C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dpi-0.1.2\src\lib.rs
 
 C:\Users\SleepySlezy\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dpi-0.1.2\src\lib.rs:

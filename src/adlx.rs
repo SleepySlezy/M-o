@@ -20,9 +20,15 @@ unsafe extern "C" {
 #[cfg(windows)]
 #[allow(dead_code)]
 pub fn get_telemetry() -> Option<GpuTelemetry> {
+    println!("ADLX: BEFORE FFI");
+
     let mut telemetry = GpuTelemetry::default();
 
-    let success = unsafe { gpu_x_get_telemetry(&mut telemetry) };
+    let success = unsafe {
+        gpu_x_get_telemetry(&mut telemetry)
+    };
+
+    println!("ADLX: AFTER FFI");
 
     if success {
         Some(telemetry)
