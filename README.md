@@ -1,5 +1,3 @@
-# PLEASE NOTE YOU NEED TO RUN `cargo check` & only `cargo run --release` if check responds with "`Finished dev profile`"
-
 ## What this first version actually gets
 
 For the **RX 9070 XT**, the important part is the DXGI adapter information. DXGI exposes the adapter's dedicated video-memory amount, and `IDXGIAdapter3::QueryVideoMemoryInfo` provides current memory usage/budget information.
