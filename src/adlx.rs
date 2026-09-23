@@ -12,23 +12,23 @@ pub struct GpuTelemetry {
 }
 
 #[cfg(windows)]
-#[allow(dead_code)]
 unsafe extern "C" {
-    fn gpu_x_get_telemetry(out: *mut GpuTelemetry) -> bool;
+    fn gpu_x_get_telemetry(
+        gpu_type: i32,
+        out: *mut GpuTelemetry,
+    ) -> bool;
 }
 
 #[cfg(windows)]
-#[allow(dead_code)]
-pub fn get_telemetry() -> Option<GpuTelemetry> {
-    println!("ADLX: BEFORE FFI");
-
+pub fn get_telemetry(gpu_type: i32) -> Option<GpuTelemetry> {
     let mut telemetry = GpuTelemetry::default();
 
     let success = unsafe {
-        gpu_x_get_telemetry(&mut telemetry)
+        gpu_x_get_telemetry(
+            gpu_type,
+            &mut telemetry,
+        )
     };
-
-    println!("ADLX: AFTER FFI");
 
     if success {
         Some(telemetry)
@@ -38,7 +38,6 @@ pub fn get_telemetry() -> Option<GpuTelemetry> {
 }
 
 #[cfg(not(windows))]
-#[allow(dead_code)]
-pub fn get_telemetry() -> Option<GpuTelemetry> {
+pub fn get_telemetry(_gpu_type: i32) -> Option<GpuTelemetry> {
     None
 }

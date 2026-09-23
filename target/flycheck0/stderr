@@ -1,0 +1,941 @@
+   0.254956700s  INFO prepare_target{force=false package_id=gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X) target="gpu-x"}: cargo::core::compiler::fingerprint: fingerprint error for gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X)/Check { test: false }/TargetInner { name: "gpu-x", doc: true, ..: with_path("C:\\Users\\SleepySlezy\\OneDrive\\Desktop\\folder of doom and despair\\Read and Display\\GPU-X\\src\\main.rs", Edition2024) }
+   0.254992500s  INFO prepare_target{force=false package_id=gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X) target="gpu-x"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\gpu-x-f0684ab7708c2912\bin-gpu-x`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_libgit2_prerelease
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+   0.260192300s  INFO prepare_target{force=false package_id=eframe v0.33.3 target="eframe"}: cargo::core::compiler::fingerprint: fingerprint error for eframe v0.33.3/Check { test: false }/TargetInner { ..: lib_target("eframe", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\eframe-0.33.3\\src\\lib.rs", Edition2024) }
+   0.260206700s  INFO prepare_target{force=false package_id=eframe v0.33.3 target="eframe"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\eframe-f82c83dd959560fc\lib-eframe`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.262335100s  INFO prepare_target{force=false package_id=egui v0.33.3 target="egui"}: cargo::core::compiler::fingerprint: fingerprint error for egui v0.33.3/Check { test: false }/TargetInner { ..: lib_target("egui", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\egui-0.33.3\\src\\lib.rs", Edition2024) }
+   0.262347500s  INFO prepare_target{force=false package_id=egui v0.33.3 target="egui"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\egui-7179069f844a4abc\lib-egui`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.264356400s  INFO prepare_target{force=false package_id=epaint v0.33.3 target="epaint"}: cargo::core::compiler::fingerprint: fingerprint error for epaint v0.33.3/Check { test: false }/TargetInner { ..: lib_target("epaint", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\epaint-0.33.3\\src\\lib.rs", Edition2024) }
+   0.264366800s  INFO prepare_target{force=false package_id=epaint v0.33.3 target="epaint"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\epaint-5069d133482edaf8\lib-epaint`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.266611400s  INFO prepare_target{force=false package_id=egui-winit v0.33.3 target="egui_winit"}: cargo::core::compiler::fingerprint: fingerprint error for egui-winit v0.33.3/Check { test: false }/TargetInner { ..: lib_target("egui_winit", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\egui-winit-0.33.3\\src\\lib.rs", Edition2024) }
+   0.266622300s  INFO prepare_target{force=false package_id=egui-winit v0.33.3 target="egui_winit"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\egui-winit-44d4d23a67d76d78\lib-egui_winit`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.266983800s  INFO prepare_target{force=false package_id=accesskit_winit v0.29.2 target="accesskit_winit"}: cargo::core::compiler::fingerprint: fingerprint error for accesskit_winit v0.29.2/Check { test: false }/TargetInner { ..: lib_target("accesskit_winit", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\accesskit_winit-0.29.2\\src\\lib.rs", Edition2021) }
+   0.266994300s  INFO prepare_target{force=false package_id=accesskit_winit v0.29.2 target="accesskit_winit"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\accesskit_winit-2a612c1601696ed3\lib-accesskit_winit`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.267237800s  INFO prepare_target{force=false package_id=accesskit_windows v0.29.2 target="accesskit_windows"}: cargo::core::compiler::fingerprint: fingerprint error for accesskit_windows v0.29.2/Check { test: false }/TargetInner { ..: lib_target("accesskit_windows", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\accesskit_windows-0.29.2\\src\\lib.rs", Edition2021) }
+   0.267252700s  INFO prepare_target{force=false package_id=accesskit_windows v0.29.2 target="accesskit_windows"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\accesskit_windows-5e6ea8cf890123f5\lib-accesskit_windows`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.267824200s  INFO prepare_target{force=false package_id=windows v0.61.3 target="windows"}: cargo::core::compiler::fingerprint: fingerprint error for windows v0.61.3/Check { test: false }/TargetInner { tested: false, doctest: false, ..: lib_target("windows", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-0.61.3\\src\\lib.rs", Edition2021) }
+   0.267834800s  INFO prepare_target{force=false package_id=windows v0.61.3 target="windows"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\windows-b794745711b02109\lib-windows`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.271470200s  INFO prepare_target{force=false package_id=arboard v3.6.1 target="arboard"}: cargo::core::compiler::fingerprint: fingerprint error for arboard v3.6.1/Check { test: false }/TargetInner { ..: lib_target("arboard", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arboard-3.6.1\\src\\lib.rs", Edition2021) }
+   0.271486600s  INFO prepare_target{force=false package_id=arboard v3.6.1 target="arboard"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\arboard-638d77f1e8266eac\lib-arboard`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.271881100s  INFO prepare_target{force=false package_id=image v0.25.10 target="image"}: cargo::core::compiler::fingerprint: fingerprint error for image v0.25.10/Check { test: false }/TargetInner { ..: lib_target("image", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\image-0.25.10\\src\\lib.rs", Edition2021) }
+   0.271890900s  INFO prepare_target{force=false package_id=image v0.25.10 target="image"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\image-e9551be47da7e537\lib-image`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.275096000s  INFO prepare_target{force=false package_id=webbrowser v1.2.4 target="webbrowser"}: cargo::core::compiler::fingerprint: fingerprint error for webbrowser v1.2.4/Check { test: false }/TargetInner { ..: lib_target("webbrowser", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\webbrowser-1.2.4\\src\\lib.rs", Edition2021) }
+   0.275110100s  INFO prepare_target{force=false package_id=webbrowser v1.2.4 target="webbrowser"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\webbrowser-6ca7ebf093cb3bbe\lib-webbrowser`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.275366300s  INFO prepare_target{force=false package_id=url v2.5.8 target="url"}: cargo::core::compiler::fingerprint: fingerprint error for url v2.5.8/Check { test: false }/TargetInner { ..: lib_target("url", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\url-2.5.8\\src\\lib.rs", Edition2018) }
+   0.275376400s  INFO prepare_target{force=false package_id=url v2.5.8 target="url"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\url-bee717d72c492228\lib-url`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.275778100s  INFO prepare_target{force=false package_id=idna v1.1.0 target="idna"}: cargo::core::compiler::fingerprint: fingerprint error for idna v1.1.0/Check { test: false }/TargetInner { doctest: false, ..: lib_target("idna", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\idna-1.1.0\\src\\lib.rs", Edition2018) }
+   0.275788100s  INFO prepare_target{force=false package_id=idna v1.1.0 target="idna"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\idna-42e2a200caf271a3\lib-idna`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.275981400s  INFO prepare_target{force=false package_id=idna_adapter v1.2.2 target="idna_adapter"}: cargo::core::compiler::fingerprint: fingerprint error for idna_adapter v1.2.2/Check { test: false }/TargetInner { ..: lib_target("idna_adapter", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\idna_adapter-1.2.2\\src\\lib.rs", Edition2024) }
+   0.275991500s  INFO prepare_target{force=false package_id=idna_adapter v1.2.2 target="idna_adapter"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\idna_adapter-c3f06245bc04f34a\lib-idna_adapter`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.276150700s  INFO prepare_target{force=false package_id=icu_normalizer v2.3.0 target="icu_normalizer"}: cargo::core::compiler::fingerprint: fingerprint error for icu_normalizer v2.3.0/Check { test: false }/TargetInner { ..: lib_target("icu_normalizer", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_normalizer-2.3.0\\src\\lib.rs", Edition2024) }
+   0.276159700s  INFO prepare_target{force=false package_id=icu_normalizer v2.3.0 target="icu_normalizer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\icu_normalizer-40ecabcf84f0fd5c\lib-icu_normalizer`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.276365100s  INFO prepare_target{force=false package_id=icu_collections v2.3.0 target="icu_collections"}: cargo::core::compiler::fingerprint: fingerprint error for icu_collections v2.3.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("icu_collections", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_collections-2.3.0\\src\\lib.rs", Edition2024) }
+   0.276375700s  INFO prepare_target{force=false package_id=icu_collections v2.3.0 target="icu_collections"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\icu_collections-65fd7de4a29f0f4c\lib-icu_collections`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.276673200s  INFO prepare_target{force=false package_id=potential_utf v0.1.6 target="potential_utf"}: cargo::core::compiler::fingerprint: fingerprint error for potential_utf v0.1.6/Check { test: false }/TargetInner { ..: lib_target("potential_utf", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\potential_utf-0.1.6\\src\\lib.rs", Edition2021) }
+   0.276682800s  INFO prepare_target{force=false package_id=potential_utf v0.1.6 target="potential_utf"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\potential_utf-6048f4c34a6dd510\lib-potential_utf`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.276877000s  INFO prepare_target{force=false package_id=zerovec v0.11.8 target="zerovec"}: cargo::core::compiler::fingerprint: fingerprint error for zerovec v0.11.8/Check { test: false }/TargetInner { benched: false, ..: lib_target("zerovec", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerovec-0.11.8\\src\\lib.rs", Edition2021) }
+   0.276886700s  INFO prepare_target{force=false package_id=zerovec v0.11.8 target="zerovec"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\zerovec-f78744bddc9de11b\lib-zerovec`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_filter_source_repo
+  20: git_libgit2_prerelease
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: <unknown>
+  25: git_midx_writer_dump
+  26: git_filter_source_repo
+  27: git_midx_writer_dump
+  28: BaseThreadInitThunk
+  29: RtlUserThreadStart
+   0.278377000s  INFO prepare_target{force=false package_id=icu_provider v2.3.1 target="icu_provider"}: cargo::core::compiler::fingerprint: fingerprint error for icu_provider v2.3.1/Check { test: false }/TargetInner { benched: false, ..: lib_target("icu_provider", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_provider-2.3.1\\src\\lib.rs", Edition2024) }
+   0.278388100s  INFO prepare_target{force=false package_id=icu_provider v2.3.1 target="icu_provider"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\icu_provider-2f2c2f8bf4e2e672\lib-icu_provider`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.278596200s  INFO prepare_target{force=false package_id=icu_locale_core v2.3.0 target="icu_locale_core"}: cargo::core::compiler::fingerprint: fingerprint error for icu_locale_core v2.3.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("icu_locale_core", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_locale_core-2.3.0\\src\\lib.rs", Edition2024) }
+   0.278606100s  INFO prepare_target{force=false package_id=icu_locale_core v2.3.0 target="icu_locale_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\icu_locale_core-a41417c4cd5caacc\lib-icu_locale_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.278941900s  INFO prepare_target{force=false package_id=tinystr v0.8.4 target="tinystr"}: cargo::core::compiler::fingerprint: fingerprint error for tinystr v0.8.4/Check { test: false }/TargetInner { benched: false, ..: lib_target("tinystr", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinystr-0.8.4\\src\\lib.rs", Edition2021) }
+   0.278951600s  INFO prepare_target{force=false package_id=tinystr v0.8.4 target="tinystr"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\tinystr-21fad889fd56a6ea\lib-tinystr`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_filter_source_repo
+  20: git_libgit2_prerelease
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: <unknown>
+  25: git_midx_writer_dump
+  26: git_filter_source_repo
+  27: git_midx_writer_dump
+  28: BaseThreadInitThunk
+  29: RtlUserThreadStart
+   0.279272400s  INFO prepare_target{force=false package_id=zerotrie v0.2.5 target="zerotrie"}: cargo::core::compiler::fingerprint: fingerprint error for zerotrie v0.2.5/Check { test: false }/TargetInner { benched: false, ..: lib_target("zerotrie", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerotrie-0.2.5\\src\\lib.rs", Edition2021) }
+   0.279282200s  INFO prepare_target{force=false package_id=zerotrie v0.2.5 target="zerotrie"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\zerotrie-f8265af415f165ae\lib-zerotrie`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.279474000s  INFO prepare_target{force=false package_id=icu_properties v2.3.0 target="icu_properties"}: cargo::core::compiler::fingerprint: fingerprint error for icu_properties v2.3.0/Check { test: false }/TargetInner { ..: lib_target("icu_properties", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_properties-2.3.0\\src\\lib.rs", Edition2024) }
+   0.279483500s  INFO prepare_target{force=false package_id=icu_properties v2.3.0 target="icu_properties"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\icu_properties-fba4bc84823d780d\lib-icu_properties`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.280269700s  INFO prepare_target{force=false package_id=egui_glow v0.33.3 target="egui_glow"}: cargo::core::compiler::fingerprint: fingerprint error for egui_glow v0.33.3/Check { test: false }/TargetInner { ..: lib_target("egui_glow", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\egui_glow-0.33.3\\src\\lib.rs", Edition2024) }
+   0.280279800s  INFO prepare_target{force=false package_id=egui_glow v0.33.3 target="egui_glow"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\egui_glow-ff4df08c01b4cbf1\lib-egui_glow`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.284805900s  INFO prepare_target{force=false package_id=gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\SleepySlezy\\OneDrive\\Desktop\\folder of doom and despair\\Read and Display\\GPU-X\\build.rs", Edition2024) }
+   0.284823200s  INFO prepare_target{force=false package_id=gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\gpu-x-ab1719f1ca12e13e\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.285255700s  INFO prepare_target{force=false package_id=windows v0.62.2 target="windows"}: cargo::core::compiler::fingerprint: fingerprint error for windows v0.62.2/Check { test: false }/TargetInner { tested: false, doctest: false, ..: lib_target("windows", ["lib"], "C:\\Users\\SleepySlezy\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-0.62.2\\src\\lib.rs", Edition2021) }
+   0.285267100s  INFO prepare_target{force=false package_id=windows v0.62.2 target="windows"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\windows-bf67fdcb6ab97ced\lib-windows`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.286414600s  INFO prepare_target{force=false package_id=gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X) target="gpu-x"}: cargo::core::compiler::fingerprint: fingerprint error for gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X)/Check { test: true }/TargetInner { name: "gpu-x", doc: true, ..: with_path("C:\\Users\\SleepySlezy\\OneDrive\\Desktop\\folder of doom and despair\\Read and Display\\GPU-X\\src\\main.rs", Edition2024) }
+   0.286426500s  INFO prepare_target{force=false package_id=gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X) target="gpu-x"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\.fingerprint\gpu-x-ea95825e6aad1e01\test-bin-gpu-x`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_libgit2_prerelease
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: git_midx_writer_dump
+  16: git_filter_source_repo
+  17: git_midx_writer_dump
+  18: BaseThreadInitThunk
+  19: RtlUserThreadStart
+    Checking image v0.25.10
+    Checking windows v0.61.3
+   Compiling gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X)
+    Checking windows v0.62.2
+    Checking zerovec v0.11.8
+    Checking zerotrie v0.2.5
+    Checking epaint v0.33.3
+error: failed to run custom build command for `gpu-x v0.1.0 (C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X)`
+note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
+
+Caused by:
+  process didn't exit successfully: `C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\build\gpu-x-9504255d8d00ef86\build-script-build` (exit code: 1)
+  --- stdout
+  cargo:rerun-if-changed=C:\Users\SleepySlezy\Downloads\ADLX-main\ADLX-main\SDK\Include
+  cargo:rerun-if-changed=C:\Users\SleepySlezy\Downloads\ADLX-main\ADLX-main\SDK\ADLXHelper\Windows\Cpp
+  cargo:rerun-if-changed=C:\Users\SleepySlezy\Downloads\ADLX-main\ADLX-main\SDK\Platform\Windows
+  cargo:rerun-if-env-changed=CC_FORCE_DISABLE
+  CC_FORCE_DISABLE = None
+  cargo:rerun-if-env-changed=VCINSTALLDIR
+  VCINSTALLDIR = None
+  cargo:rerun-if-env-changed=VSTEL_MSBuildProjectFullPath
+  VSTEL_MSBuildProjectFullPath = None
+  cargo:rerun-if-env-changed=VCToolsVersion
+  VCToolsVersion = None
+  cargo:rerun-if-env-changed=VSCMD_ARG_VCVARS_SPECTRE
+  VSCMD_ARG_VCVARS_SPECTRE = None
+  cargo:rerun-if-env-changed=WindowsSdkDir
+  WindowsSdkDir = None
+  cargo:rerun-if-env-changed=WindowsSDKVersion
+  WindowsSDKVersion = None
+  cargo:rerun-if-env-changed=LIB
+  LIB = None
+  PATH = Some(C:\Users\SleepySlezy\OneDrive\Desktop\folder of doom and despair\Read and Display\GPU-X\target\debug\deps;C:\Users\SleepySlezy\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\CMake\bin;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\Git\cmd;C:\Users\SleepySlezy\.cargo\bin;C:\Users\SleepySlezy\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\SleepySlezy\AppData\Local\Programs\Python\Python314\;C:\Users\SleepySlezy\AppData\Local\Programs\Python\Launcher\;C:\Users\SleepySlezy\AppData\Local\Microsoft\WindowsApps;C:\Users\SleepySlezy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\SleepySlezy\AppData\Local\Microsoft\WinGet\Links;C:\Users\SleepySlezy\AppData\Local\GitHubDesktop\bin;C:\Users\SleepySlezy\AppData\Local\Microsoft\WinGet\Packages\Maxon.CinebenchR23_Microsoft.Winget.Source_8wekyb3d8bbwe;;C:\Users\SleepySlezy\AppData\Local\Programs\Obsidian;C:\Users\SleepySlezy\.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin)
+  cargo:rerun-if-env-changed=INCLUDE
+  INCLUDE = None
+  cargo:rerun-if-env-changed=CXX_x86_64-pc-windows-msvc
+  CXX_x86_64-pc-windows-msvc = None
+  cargo:rerun-if-env-changed=CXX_x86_64_pc_windows_msvc
+  CXX_x86_64_pc_windows_msvc = None
+  cargo:rerun-if-env-changed=HOST_CXX
+  HOST_CXX = None
+  cargo:rerun-if-env-changed=CXX
+  CXX = None
+  cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+  CRATE_CC_NO_DEFAULTS = None
+  cargo:rerun-if-env-changed=CXXFLAGS
+  CXXFLAGS = None
+  cargo:rerun-if-env-changed=HOST_CXXFLAGS
+  HOST_CXXFLAGS = None
+  cargo:rerun-if-env-changed=CXXFLAGS_x86_64_pc_windows_msvc
+  CXXFLAGS_x86_64_pc_windows_msvc = None
+  cargo:rerun-if-env-changed=CXXFLAGS_x86_64-pc-windows-msvc
+  CXXFLAGS_x86_64-pc-windows-msvc = None
+  cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+  adlx_bridge.cpp
+  src/adlx_bridge.cpp(108): error C2664: 'ADLX_RESULT adlx::IADLXGPU::Type(adlx::ADLX_GPU_TYPE *) const': cannot convert argument 1 from 'adlx_int *' to 'adlx::ADLX_GPU_TYPE *'
+  src/adlx_bridge.cpp(108): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+  C:\Users\SleepySlezy\Downloads\ADLX-main\ADLX-main\SDK\Include\ISystem.h(113): note: see declaration of 'adlx::IADLXGPU::Type'
+  src/adlx_bridge.cpp(108): note: while trying to match the argument list '(adlx_int *)'
+
+  --- stderr
+
+
+  error occurred in cc-rs: command did not execute successfully (status code exit code: 2): "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "C:\\Users\\SleepySlezy\\Downloads\\ADLX-main\\ADLX-main\\SDK\\Include" "-I" "C:\\Users\\SleepySlezy\\Downloads\\ADLX-main\\ADLX-main\\SDK\\ADLXHelper\\Windows\\Cpp" "-I" "C:\\Users\\SleepySlezy\\Downloads\\ADLX-main\\ADLX-main\\SDK\\Platform\\Windows" "-W4" "-FoC:\\Users\\SleepySlezy\\OneDrive\\Desktop\\folder of doom and despair\\Read and Display\\GPU-X\\target\\debug\\build\\gpu-x-ab1719f1ca12e13e\\out\\0602fb52cb66f316-adlx_bridge.o" "-c" "src/adlx_bridge.cpp"
+
+
+warning: build failed, waiting for other jobs to finish...
+    Checking tinystr v0.8.4
+    Checking potential_utf v0.1.6
+    Checking icu_collections v2.3.0
+    Checking icu_locale_core v2.3.0
+    Checking egui v0.33.3
+    Checking arboard v3.6.1
+    Checking icu_provider v2.3.1
+    Checking icu_normalizer v2.3.0
+    Checking icu_properties v2.3.0
+    Checking idna_adapter v1.2.2
+    Checking idna v1.1.0
+    Checking url v2.5.8
+    Checking webbrowser v1.2.4
+    Checking egui_glow v0.33.3
+    Checking accesskit_windows v0.29.2
+    Checking accesskit_winit v0.29.2
+    Checking egui-winit v0.33.3
+    Checking eframe v0.33.3

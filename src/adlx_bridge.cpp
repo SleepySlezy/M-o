@@ -52,7 +52,9 @@ struct GpuTelemetry
     double fan_rpm;
 };
 
-extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
+extern "C" bool gpu_x_get_telemetry(
+    int gpu_type,
+    GpuTelemetry* out)
 {
     if (out == nullptr)
         return false;
@@ -73,9 +75,12 @@ extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
     }
 
     IADLXGPUListPtr gpu_list;
-    ADLX_RESULT result = system->GetGPUs(&gpu_list);
 
-    if (result != ADLX_OK || gpu_list == nullptr)
+    ADLX_RESULT result =
+        system->GetGPUs(&gpu_list);
+
+    if (result != ADLX_OK ||
+        gpu_list == nullptr)
     {
         system = nullptr;
         helper.Terminate();
@@ -83,11 +88,51 @@ extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
     }
 
     IADLXGPUPtr gpu;
-    result = gpu_list->At(0, &gpu);
 
-    if (result != ADLX_OK || gpu == nullptr)
+    adlx_uint count = gpu_list->Size();
+
+    for (adlx_uint i = 0; i < count; ++i)
     {
-        gpu = nullptr;
+        IADLXGPUPtr candidate;
+
+        result = gpu_list->At(i, &candidate);
+
+        if (result != ADLX_OK ||
+            candidate == nullptr)
+        {
+            continue;
+        }
+
+        adlx_int type = GPUTYPE_UNDEFINED;
+
+        result = candidate->Type(&type);
+
+        if (result != ADLX_OK)
+            continue;
+
+        /*
+            gpu_type:
+            0 = Integrated
+            1 = Discrete
+        */
+
+        if (gpu_type == 0 &&
+            type == GPUTYPE_INTEGRATED)
+        {
+            gpu = candidate;
+            break;
+        }
+
+        if (gpu_type == 1 &&
+            type == GPUTYPE_DISCRETE)
+        {
+            gpu = candidate;
+            break;
+        }
+    }
+
+    if (gpu == nullptr)
+    {
         gpu_list = nullptr;
         system = nullptr;
         helper.Terminate();
@@ -95,28 +140,39 @@ extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
     }
 
     IADLXPerformanceMonitoringServicesPtr performance;
-    result = system->GetPerformanceMonitoringServices(&performance);
 
-    if (result != ADLX_OK || performance == nullptr)
+    result =
+        system->GetPerformanceMonitoringServices(
+            &performance);
+
+    if (result != ADLX_OK ||
+        performance == nullptr)
     {
         performance = nullptr;
         gpu = nullptr;
         gpu_list = nullptr;
         system = nullptr;
+
         helper.Terminate();
         return false;
     }
 
     IADLXGPUMetricsPtr metrics;
-    result = performance->GetCurrentGPUMetrics(gpu, &metrics);
 
-    if (result != ADLX_OK || metrics == nullptr)
+    result =
+        performance->GetCurrentGPUMetrics(
+            gpu,
+            &metrics);
+
+    if (result != ADLX_OK ||
+        metrics == nullptr)
     {
         metrics = nullptr;
         performance = nullptr;
         gpu = nullptr;
         gpu_list = nullptr;
         system = nullptr;
+
         helper.Terminate();
         return false;
     }
@@ -136,11 +192,14 @@ extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
     metrics->GPUFanSpeed(&fan_rpm);
 
     out->gpu_usage = gpu_usage;
-    out->gpu_clock = static_cast<double>(gpu_clock);
-    out->memory_clock = static_cast<double>(memory_clock);
+    out->gpu_clock =
+        static_cast<double>(gpu_clock);
+    out->memory_clock =
+        static_cast<double>(memory_clock);
     out->temperature = temperature;
     out->power = power;
-    out->fan_rpm = static_cast<double>(fan_rpm);
+    out->fan_rpm =
+        static_cast<double>(fan_rpm);
 
     metrics = nullptr;
     performance = nullptr;
@@ -154,7 +213,9 @@ extern "C" bool gpu_x_get_telemetry(GpuTelemetry* out)
 
 #else
 
+    (void)gpu_type;
     (void)out;
+
     return false;
 
 #endif

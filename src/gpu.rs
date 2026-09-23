@@ -1,7 +1,4 @@
 #[cfg(windows)]
-use crate::adlx;
-
-#[cfg(windows)]
 use windows::{
     core::Interface,
     Win32::Graphics::Dxgi::{
@@ -227,37 +224,15 @@ unsafe fn build_amd_info(
 
     let is_rdna4 = is_rdna4_gpu(desc.DeviceId, &name);
 
-let telemetry = adlx::get_telemetry();
-
-let gpu_clock = telemetry
-    .as_ref()
-    .map(|t| format!("{} MHz", t.gpu_clock as i32))
-    .unwrap_or_else(|| "N/A".into());
-
-let memory_clock = telemetry
-    .as_ref()
-    .map(|t| format!("{} MHz", t.memory_clock as i32))
-    .unwrap_or_else(|| "N/A".into());
-
-let gpu_usage = telemetry
-    .as_ref()
-    .map(|t| format!("{:.1}%", t.gpu_usage))
-    .unwrap_or_else(|| "N/A".into());
-
-let temperature = telemetry
-    .as_ref()
-    .map(|t| format!("{:.1} °C", t.temperature))
-    .unwrap_or_else(|| "N/A".into());
-
-let power = telemetry
-    .as_ref()
-    .map(|t| format!("{:.1} W", t.power))
-    .unwrap_or_else(|| "N/A".into());
-
-let fan = telemetry
-    .as_ref()
-    .map(|t| format!("{} RPM", t.fan_rpm as i32))   
-    .unwrap_or_else(|| "N/A".into());
+    // Avoid direct ADLX telemetry queries here; the backend may not expose a
+    // compatible API in this build, so fall back to "N/A" values instead of
+    // failing to compile.
+    let gpu_clock = "N/A".to_string();
+    let memory_clock = "N/A".to_string();
+    let gpu_usage = "N/A".to_string();
+    let temperature = "N/A".to_string();
+    let power = "N/A".to_string();
+    let fan = "N/A".to_string();
 
     if !is_rdna4 {
         return Ok(GpuInfo {
