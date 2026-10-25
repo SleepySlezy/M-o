@@ -1,4 +1,7 @@
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+#![cfg_attr(
+    all(not(debug_assertions), target_os = "windows"),
+    windows_subsystem = "windows"
+)]
 
 mod adlx;
 mod gpu;
@@ -48,7 +51,6 @@ impl eframe::App for GpuXApp {
             }
 
             section_header(ui, "GPU");
-
             info_row(ui, "Name", &self.gpu.name);
             info_row(ui, "Architecture", &self.gpu.architecture);
             info_row(ui, "Vendor", &self.gpu.vendor);
@@ -58,9 +60,7 @@ impl eframe::App for GpuXApp {
             info_row(ui, "GPU Type", &self.gpu.gpu_type);
 
             ui.add_space(10.0);
-
             section_header(ui, "Memory");
-
             info_row(ui, "VRAM", &self.gpu.vram_total);
             info_row(ui, "VRAM Used", &self.gpu.vram_used);
             info_row(ui, "VRAM Available", &self.gpu.vram_available);
@@ -69,32 +69,25 @@ impl eframe::App for GpuXApp {
             info_row(ui, "Memory Bandwidth", &self.gpu.memory_bandwidth);
 
             ui.add_space(10.0);
-
             section_header(ui, "Clocks");
-
             info_row(ui, "GPU Clock", &self.gpu.gpu_clock);
             info_row(ui, "Memory Clock", &self.gpu.memory_clock);
             info_row(ui, "Boost Clock", &self.gpu.boost_clock);
 
             ui.add_space(10.0);
-
             section_header(ui, "Sensors");
-
             info_row(ui, "GPU Usage", &self.gpu.gpu_usage);
             info_row(ui, "Temperature", &self.gpu.temperature);
             info_row(ui, "Power", &self.gpu.power);
             info_row(ui, "Fan", &self.gpu.fan);
 
             ui.add_space(10.0);
-
             section_header(ui, "Software");
-
             info_row(ui, "Driver", &self.gpu.driver);
             info_row(ui, "Driver Version", &self.gpu.driver_version);
             info_row(ui, "VBIOS", &self.gpu.vbios);
 
             ui.separator();
-
             ui.horizontal(|ui| {
                 if ui.button("Refresh").clicked() {
                     self.refresh();
@@ -108,12 +101,10 @@ impl eframe::App for GpuXApp {
             });
 
             ui.add_space(5.0);
-
             ui.small(format!(
                 "Last refresh: {:.1}s ago",
                 self.last_refresh.elapsed().as_secs_f32()
             ));
-
             ui.small("GPU-X 0.1.0 • Read-only");
         });
 
@@ -128,10 +119,10 @@ fn section_header(ui: &mut egui::Ui, text: &str) {
 
 fn info_row(ui: &mut egui::Ui, name: &str, value: &str) {
     ui.horizontal(|ui| {
-        ui.add_sized([150.0, 20.0], egui::Label::new(
-            egui::RichText::new(name).strong()
-        ));
-
+        ui.add_sized(
+            [150.0, 20.0],
+            egui::Label::new(egui::RichText::new(name).strong()),
+        );
         ui.label(value);
     });
 }

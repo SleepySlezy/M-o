@@ -1,33 +1,44 @@
-use std::env;
+﻿use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    let manifest_dir = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap());
+    let target = env::var("TARGET").unwrap_or_default();
 
-    let adlx_sdk = PathBuf::from(
-        r"C:\Users\SleepySlezy\Downloads\ADLX-main\ADLX-main\SDK"
-    );
+    println!("cargo:rerun-if-changed=src/adlx_bridge.cpp");
+    println!("cargo:rerun-if-env-changed=ADLX_SDK_PATH");
 
-    let include = adlx_sdk.join("Include");
-    let helper = adlx_sdk.join("ADLXHelper").join("Windows").join("Cpp");
-    let platform = adlx_sdk.join("Platform").join("Windows");
+    if !target.contains("windows") {
+        return;
+    }
 
-    println!("cargo:rerun-if-changed={}", include.display());
-    println!("cargo:rerun-if-changed={}", helper.display());
-    println!("cargo:rerun-if-changed={}", platform.display());
+    let mut build = cc::Build::new();
+    build.cpp(true).file("src/adlx_bridge.cpp");
 
-cc::Build::new()
-    .cpp(true)
-    .file("src/adlx_bridge.cpp")
-    .file(helper.join("ADLXHelper.cpp"))
-    .file(platform.join("WinAPIs.cpp"))
-    .include(&include)
-    .include(&helper)
-    .include(&platform)
-    .compile("adlx_bridge");
+    if let Some(sdk_path) = env::var_os("ADLX_SDK_PATH") {
+        let sdk = PathBuf::from(sdk_path);
+        let include = sdk.join("Include");
+        let helper = sdk.join("ADLXHelper").join("Windows").join("Cpp");
+        let platform = sdk.join("Platform").join("Windows");
+        let helper_cpp = helper.join("ADLXHelper.cpp");
+        let platform_cpp = platform.join("WinAPIs.cpp");
 
-    println!(
-        "cargo:rustc-link-search=native={}",
-        manifest_dir.join("target").display()
-    );
+        if !include.is_dir() || !helper_cpp.is_file() || !platform_cpp.is_file() {
+            panic!("Invalid ADLX SDK root: {}", sdk.display());
+        }
+
+        println!("cargo:rerun-if-changed={}", include.display());
+        println!("cargo:rerun-if-changed={}", helper_cpp.display());
+        println!("cargo:rerun-if-changed={}", platform_cpp.display());
+
+        build
+            .file(helper_cpp)
+            .file(platform_cpp)
+            .include(include)
+            .include(helper)
+            .include(platform);
+    } else {
+        println!("cargo:warning=ADLX_SDK_PATH is unset; building without ADLX telemetry.");
+    }
+
+    build.compile("adlx_bridge");
 }
